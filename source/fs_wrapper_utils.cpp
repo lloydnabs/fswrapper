@@ -21,6 +21,11 @@
 
 typedef int (*FallbackHelperInternal)(FallbackParamWrapper*, OSAsyncParamWrapper *);
 
+void symlink() {
+} 
+void readlink() {
+} 
+
 static int fallbackCaller(FallbackHelperInternal _function, void * fallbackparams){
     FallbackParamWrapper * paramsWrapper = (FallbackParamWrapper *)fallbackparams;
     OSAsyncParamWrapper * params = &(paramsWrapper->params);
